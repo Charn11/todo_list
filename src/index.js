@@ -1,1 +1,1 @@
-alert("yes")
+import './style.css';
