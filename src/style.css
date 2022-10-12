@@ -7,13 +7,30 @@ body{
 }
 #main-cont{
     display: grid;
-    grid-template-rows: 10% 85% 5%;
+    grid-template-rows: repeat(auto-fit, minmax(120px, max-content));
     margin: 0px;
     min-height: 100vh;
 }
+#header{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50px,100px));
+    background-color: lightgreen;
+}
+#title{
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+}
 #head-icon{
-    width: 100%;
+    max-width: 100px;
     height: 100%; 
     object-fit: contain;
     background-size: contain;
+    padding-left: 20px;
+}
+#content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
 }
