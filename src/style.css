@@ -7,13 +7,14 @@ body{
 }
 #main-cont{
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(120px, max-content));
+    grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
     margin: 0px;
     min-height: 100vh;
 }
 #header{
     display: grid;
     grid-template-columns: repeat(2, minmax(50px,100px));
+    padding: 10px 0px;
     background-color: lightgreen;
 }
 #title{
@@ -32,5 +33,38 @@ body{
 }
 #content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    height: 100vh;
+    grid-template-columns: 15% 85%;
+}
+.nav-ul{
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.nav-ul>li{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 20px 0px;
+    width: 100%;
+}
+.nav-ul>li:hover{
+    background-color: lightgrey;
+}
+#nav-bar{
+    display: flex;
+    padding: 20px 0px;
+    background-color: skyblue;
+    border-right: solid 2px lightgreen;
+}
+#footer{
+    display: flex;
+    width: 100%;
+    padding: 5px 0px;
+    justify-content: center;
+    background-color: wheat;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
