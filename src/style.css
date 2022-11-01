@@ -50,10 +50,11 @@ body{
 }
 .nav-ul>li:hover{
     background-color: lightgrey;
+    cursor: pointer;
 }
 #nav-bar{
     display: flex;
-    padding: 20px 0px;
+    padding: 0px 0px 20px 0px;
     background-color: skyblue;
     border-right: solid 2px lightgreen;
 }
@@ -67,4 +68,22 @@ body{
 a{
     text-decoration: none;
     color: black;
+}
+#task-content{
+    display: grid;
+    min-width: 100%;
+    min-height: 100%;
+    grid-template-rows: 5% 95%;
+}
+#headCont{
+    display: flex;
+    justify-content: space-between;
+}
+#taskHeading{
+    padding: 0px;
+    margin: 0px;
+}
+#crtTask{
+    padding: 0px;
+    margin: 0px;
 }
