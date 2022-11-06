@@ -78,12 +78,16 @@ a{
 #headCont{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 #taskHeading{
-    padding: 0px;
+    padding: 10px 20px 10px 20px;
     margin: 0px;
 }
 #crtTask{
-    padding: 0px;
-    margin: 0px;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 20px;
+}
+#crtTask:hover{
+    cursor: pointer;
 }
