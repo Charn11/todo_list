@@ -15,7 +15,7 @@ let addTask = () => {
         //create input
         let labelName = document.createElement("label");
         labelName.setAttribute("for","inputName");
-        labelName.innerText = "Title";
+        labelName.innerText = "Title:";
         taskForm.appendChild(labelName);
         let inputName = document.createElement('input');
         inputName.setAttribute("type","text");
@@ -25,7 +25,7 @@ let addTask = () => {
         //create description
         let labelDesp = document.createElement("label");
         labelDesp.setAttribute("for","inputDesp");
-        labelDesp.innerText = "Description";
+        labelDesp.innerText = "Description:";
         taskForm.appendChild(labelDesp);
         let inputDesp = document.createElement('input');
         inputDesp.setAttribute("type","text");
@@ -35,7 +35,7 @@ let addTask = () => {
         //create duedate
         let labelDate = document.createElement("label");
         labelDate.setAttribute("for","inputDate");
-        labelDate.innerText = "Due-date";
+        labelDate.innerText = "Due-date:";
         taskForm.appendChild(labelDate);
         let inputDate = document.createElement('input');
         inputDate.setAttribute("type","date");
@@ -46,6 +46,8 @@ let addTask = () => {
         let priorDiv = document.createElement('div');
         priorDiv.setAttribute("id","priorDiv");
         taskForm.appendChild(priorDiv);
+
+        let prioiHead = document.createElement('div');
 
         let labelLow = document.createElement("label");
         labelLow.setAttribute("for","inputLow");

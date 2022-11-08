@@ -78,7 +78,6 @@ a{
 #headCont{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 #taskHeading{
     padding: 10px 20px 10px 20px;
@@ -91,3 +90,24 @@ a{
 #crtTask:hover{
     cursor: pointer;
 }
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=date]{
+    width: max-content;
+    padding: 12px 20px;
+    margin: 8px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  label{
+    padding: 0px 0px 0px 20px;
+  }
