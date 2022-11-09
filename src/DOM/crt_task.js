@@ -1,5 +1,7 @@
 import { newTask, tasks, taskCont, headCont, taskHead } from "./tasks.js"
-export { addTask }
+export { addTask, submitTask }
+
+let submitTask = document.createElement('button');
 
 let addTask = () => {
     newTask.addEventListener('click', e => {
@@ -43,11 +45,15 @@ let addTask = () => {
         taskForm.appendChild(inputDate);
 
         //set priority
-        let priorDiv = document.createElement('div');
-        priorDiv.setAttribute("id","priorDiv");
-        taskForm.appendChild(priorDiv);
 
-        let prioiHead = document.createElement('div');
+        let priorHead = document.createElement('div');
+        priorHead.setAttribute("id","priorDiv");
+        taskForm.appendChild(priorHead);
+
+        let priorTitle = document.createElement('p');
+        priorTitle.setAttribute("id","priorTitle");
+        priorTitle.innerText = "Priority:";
+        priorHead.appendChild(priorTitle);
 
         let labelLow = document.createElement("label");
         labelLow.setAttribute("for","inputLow");
@@ -55,6 +61,7 @@ let addTask = () => {
         priorDiv.appendChild(labelLow);
         let inputLow = document.createElement('input');
         inputLow.setAttribute("type","radio");
+        inputLow.setAttribute("name","prior");
         inputLow.setAttribute("id","inputLow");
         priorDiv.appendChild(inputLow);
 
@@ -64,6 +71,7 @@ let addTask = () => {
         priorDiv.appendChild(labelMid);
         let inputMid = document.createElement('input');
         inputMid.setAttribute("type","radio");
+        inputMid.setAttribute("name","prior");
         inputMid.setAttribute("id","inputMid");
         priorDiv.appendChild(inputMid);
 
@@ -73,7 +81,14 @@ let addTask = () => {
         priorDiv.appendChild(labelHigh);
         let inputHigh = document.createElement('input');
         inputHigh.setAttribute("type","radio");
+        inputHigh.setAttribute("name","prior");
         inputHigh.setAttribute("id","inputHigh");
         priorDiv.appendChild(inputHigh);
+
+        //submit button
+        submitTask.setAttribute("id","submitTask");
+        submitTask.innerText = "SUBMIT";
+        taskForm.appendChild(submitTask);
+
     });
 }

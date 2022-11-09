@@ -111,3 +111,21 @@ input[type=text]{
   label{
     padding: 0px 0px 0px 20px;
   }
+  #priorTitle{
+    margin: 0px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  #submitTask{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #submitTask:hover{
+    cursor: pointer;
+    background-color: gray;
+  }
