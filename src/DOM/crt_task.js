@@ -1,7 +1,11 @@
 import { newTask, tasks, taskCont, headCont, taskHead } from "./tasks.js"
-export { addTask, submitTask }
+import { taskAdder } from "../App/add_todo.js";
+export { addTask, submitTask, inputName, inputDesp, inputDate }
 
 let submitTask = document.createElement('button');
+let inputName = document.createElement('input');
+let inputDesp = document.createElement('input');
+let inputDate = document.createElement('input');
 
 let addTask = () => {
     newTask.addEventListener('click', e => {
@@ -19,7 +23,6 @@ let addTask = () => {
         labelName.setAttribute("for","inputName");
         labelName.innerText = "Title:";
         taskForm.appendChild(labelName);
-        let inputName = document.createElement('input');
         inputName.setAttribute("type","text");
         inputName.setAttribute("id","inputName");
         taskForm.appendChild(inputName);
@@ -29,7 +32,6 @@ let addTask = () => {
         labelDesp.setAttribute("for","inputDesp");
         labelDesp.innerText = "Description:";
         taskForm.appendChild(labelDesp);
-        let inputDesp = document.createElement('input');
         inputDesp.setAttribute("type","text");
         inputDesp.setAttribute("id","inputDesp");
         taskForm.appendChild(inputDesp);
@@ -39,7 +41,6 @@ let addTask = () => {
         labelDate.setAttribute("for","inputDate");
         labelDate.innerText = "Due-date:";
         taskForm.appendChild(labelDate);
-        let inputDate = document.createElement('input');
         inputDate.setAttribute("type","date");
         inputDate.setAttribute("id","inputDate");
         taskForm.appendChild(inputDate);
@@ -61,6 +62,7 @@ let addTask = () => {
         priorDiv.appendChild(labelLow);
         let inputLow = document.createElement('input');
         inputLow.setAttribute("type","radio");
+        inputLow.setAttribute("value","Low");
         inputLow.setAttribute("name","prior");
         inputLow.setAttribute("id","inputLow");
         priorDiv.appendChild(inputLow);
@@ -71,6 +73,7 @@ let addTask = () => {
         priorDiv.appendChild(labelMid);
         let inputMid = document.createElement('input');
         inputMid.setAttribute("type","radio");
+        inputMid.setAttribute("value","Medium");
         inputMid.setAttribute("name","prior");
         inputMid.setAttribute("id","inputMid");
         priorDiv.appendChild(inputMid);
@@ -81,14 +84,22 @@ let addTask = () => {
         priorDiv.appendChild(labelHigh);
         let inputHigh = document.createElement('input');
         inputHigh.setAttribute("type","radio");
+        inputHigh.setAttribute("value","High");
         inputHigh.setAttribute("name","prior");
         inputHigh.setAttribute("id","inputHigh");
         priorDiv.appendChild(inputHigh);
 
         //submit button
         submitTask.setAttribute("id","submitTask");
+        submitTask.setAttribute("type","button");
         submitTask.innerText = "SUBMIT";
         taskForm.appendChild(submitTask);
+
+        //add task
+        submitTask.addEventListener('click', e => {
+            taskAdder();
+            
+        })
 
     });
 }
