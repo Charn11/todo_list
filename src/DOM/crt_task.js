@@ -1,5 +1,6 @@
 import { newTask, tasks, taskCont, headCont, taskHead } from "./tasks.js"
 import { taskAdder } from "../App/add_todo.js";
+import { createTable } from "./taskTable.js";
 export { addTask, submitTask, inputName, inputDesp, inputDate }
 
 let submitTask = document.createElement('button');
@@ -98,7 +99,7 @@ let addTask = () => {
         //add task
         submitTask.addEventListener('click', e => {
             taskAdder();
-            
+            createTable();
         })
 
     });

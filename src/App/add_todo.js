@@ -1,5 +1,5 @@
 import { submitTask, inputName, inputDesp, inputDate } from "../DOM/crt_task";
-export { taskAdder, task }
+export { taskAdder, task, crtTask }
 
 class task{
     constructor(title, description, duedate, priority){
