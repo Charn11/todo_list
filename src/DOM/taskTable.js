@@ -1,10 +1,9 @@
-import { taskCont } from "./tasks.js"
+import { taskCont, taskTable } from "./tasks.js"
 import { crtTask } from "../App/add_todo.js";
 export { createTable }
 
 //create task table
 let createTable = () => {
-    let taskTable = document.createElement('table');
     taskTable.setAttribute('id','taskTable');
     taskCont.appendChild(taskTable);
     let taskCount = crtTask.length;

@@ -28,5 +28,6 @@ let taskAdder = () => {
 
     crtTask[Objcount] = new task(newTitle,newDesp,newDate,newPrior);
     console.table(crtTask);
+    console.log(Objcount)
     Objcount++;
 }

@@ -1,23 +1,27 @@
-import { newTask, tasks, taskCont, headCont, taskHead } from "./tasks.js"
+import { newTask, tasks, taskCont, headCont, taskHead, taskTable } from "./tasks.js"
 import { taskAdder } from "../App/add_todo.js";
 import { createTable } from "./taskTable.js";
-export { addTask, submitTask, inputName, inputDesp, inputDate }
+import { addTasktoDOM } from "./add_task.js";
+export { addTask, submitTask, inputName, inputDesp, inputDate, taskForm }
 
 let submitTask = document.createElement('button');
 let inputName = document.createElement('input');
 let inputDesp = document.createElement('input');
 let inputDate = document.createElement('input');
+let taskForm = document.createElement('form');
 
 let addTask = () => {
     newTask.addEventListener('click', e => {
         
+        //remove table
+        taskTable.remove();
+
         newTask.remove();
         taskHead.innerText = "CREATE NEW TASK";
 
         //create containers
-        let taskForm = document.createElement('form');
         taskForm.setAttribute("id","taskForm");
-        taskCont.append(taskForm);
+        taskCont.appendChild(taskForm);
 
         //create input
         let labelName = document.createElement("label");
@@ -96,11 +100,9 @@ let addTask = () => {
         submitTask.innerText = "SUBMIT";
         taskForm.appendChild(submitTask);
 
-        //add task
-        submitTask.addEventListener('click', e => {
-            taskAdder();
-            createTable();
+        submitTask.addEventListener('click', e=> {
+            addTasktoDOM();
+            
         })
-
     });
 }

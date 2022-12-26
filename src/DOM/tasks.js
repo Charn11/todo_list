@@ -1,10 +1,11 @@
 import { mainCont } from "./start.js"
-export { tasks, newTask, taskHead, headCont, taskCont }
+export { tasks, newTask, taskHead, headCont, taskCont, taskTable }
 
 let newTask = document.createElement('button');
 let taskHead = document.createElement('h2');
 let headCont = document.createElement('div');
 let taskCont = document.createElement('div');
+let taskTable = document.createElement('table');
 
 let tasks = () => {
 
@@ -25,4 +26,8 @@ let tasks = () => {
     newTask.setAttribute("id", "crtTask");
     newTask.innerText = "ADD NEW TASK";
     headCont.appendChild(newTask);
+
+    //display table
+    taskTable.setAttribute('id','taskTable');
+    taskCont.appendChild(taskTable);
 }
