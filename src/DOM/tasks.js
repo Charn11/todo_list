@@ -1,4 +1,5 @@
 import { mainCont } from "./start.js"
+import { createTable } from "./taskTable.js";
 export { tasks, newTask, taskHead, headCont, taskCont, taskTable }
 
 let newTask = document.createElement('button');
@@ -30,4 +31,5 @@ let tasks = () => {
     //display table
     taskTable.setAttribute('id','taskTable');
     taskCont.appendChild(taskTable);
+    createTable();
 }

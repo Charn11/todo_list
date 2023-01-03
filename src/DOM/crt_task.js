@@ -2,9 +2,9 @@ import { newTask, tasks, taskCont, headCont, taskHead, taskTable } from "./tasks
 import { taskAdder } from "../App/add_todo.js";
 import { createTable } from "./taskTable.js";
 import { addTasktoDOM } from "./add_task.js";
-export { addTask, submitTask, inputName, inputDesp, inputDate, taskForm }
+export { addTask, inputName, inputDesp, inputDate, taskForm }
 
-let submitTask = document.createElement('button');
+
 let inputName = document.createElement('input');
 let inputDesp = document.createElement('input');
 let inputDate = document.createElement('input');
@@ -95,6 +95,7 @@ let addTask = () => {
         priorDiv.appendChild(inputHigh);
 
         //submit button
+        let submitTask = document.createElement('button');
         submitTask.setAttribute("id","submitTask");
         submitTask.setAttribute("type","button");
         submitTask.innerText = "SUBMIT";
@@ -102,7 +103,11 @@ let addTask = () => {
 
         submitTask.addEventListener('click', e=> {
             addTasktoDOM();
-            
+            labelName.remove();
+            labelDesp.remove();
+            labelDate.remove();
+            priorHead.remove();
+            submitTask.remove();
         })
     });
 }

@@ -1,4 +1,4 @@
-import { submitTask, inputName, inputDesp, inputDate } from "../DOM/crt_task";
+import { inputName, inputDesp, inputDate } from "../DOM/crt_task";
 export { taskAdder, task, crtTask }
 
 class task{
