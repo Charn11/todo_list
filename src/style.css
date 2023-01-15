@@ -129,3 +129,15 @@ input[type=text]{
     cursor: pointer;
     background-color: gray;
   }
+  table{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    padding: 10px 20px 10px 20px
+  }
+  td{
+    text-align: left;
+    max-width: 200px;
+    min-width: 200px;
+    padding-right: 10px 20px 10px 20px
+  }
