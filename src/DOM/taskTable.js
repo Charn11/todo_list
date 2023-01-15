@@ -39,7 +39,7 @@ let createTable = () => {
                         else if(j==4)
                         {
                             let tdImg = document.createElement('img');
-                            tdImg.setAttribute("src", "../images/delete.svg")
+                            tdImg.setAttribute('src','../images/delicon.png')
                             tasktd[j].appendChild(tdImg);
                         }
                         tasktr[i].appendChild(tasktd[j]);
